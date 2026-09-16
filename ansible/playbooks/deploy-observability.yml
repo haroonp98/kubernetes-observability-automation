@@ -1,0 +1,7 @@
+---
+- hosts: observability
+
+  become: true
+
+  roles:
+    - observability_platform

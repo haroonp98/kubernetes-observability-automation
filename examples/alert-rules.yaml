@@ -1,0 +1,22 @@
+groups:
+- name: infrastructure
+
+  rules:
+
+  - alert: NodeUnavailable
+
+    expr: up == 0
+
+    for: 5m
+
+  - alert: HighCPUUsage
+
+    expr: cpu_usage_percent > 90
+
+    for: 10m
+
+  - alert: HighMemoryUsage
+
+    expr: memory_usage_percent > 90
+
+    for: 10m
