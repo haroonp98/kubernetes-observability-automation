@@ -1,110 +1,65 @@
-# \# Kubernetes Observability Automation
+# Architecture
 
-# 
+## Overview
 
-# Automated deployment and lifecycle management of observability platforms for Kubernetes environments.
+This project demonstrates automated deployment and lifecycle management of observability platforms for Kubernetes environments.
 
-# 
+The implementation uses Infrastructure as Code principles to automate deployment, configuration, validation, and upgrades.
 
-# \---
+## Core Components
 
-# 
+- Metrics Collection
+- Log Aggregation
+- Alerting
+- Visualization
+- Upgrade Automation
 
-# \## Overview
+## Technology Stack
 
-# 
+- Kubernetes
+- Ansible
+- Helm
+- Grafana
+- Prometheus
+- Loki
+- OpenTelemetry
 
-# This project demonstrates the use of Infrastructure as Code (IaC) principles to automate the deployment, configuration, validation, and upgrade of Kubernetes observability platforms.
+## Design Goals
 
-# 
+- Repeatable Deployments
+- Automated Upgrades
+- Platform Reliability
+- Operational Consistency
+- Infrastructure as Code
 
-# The automation focuses on reducing operational overhead while improving consistency, repeatability, and platform reliability.
+## Operational Workflow
 
-# 
+```text
+Deploy
+   ↓
+Validate
+   ↓
+Monitor
+   ↓
+Upgrade
+   ↓
+Verify
+```
 
-# \---
+## Key Capabilities
 
-# 
+### Deployment Automation
 
-# \## Technologies
+Automated provisioning and configuration of observability platform components.
 
-# 
+### Upgrade Management
 
-# \- Kubernetes
+Standardized upgrade workflow with validation and health verification.
 
-# \- Ansible
+### Monitoring and Alerting
 
-# \- Helm
+Centralized visibility into platform health, application telemetry, and operational events.
 
-# \- Grafana
+### Configuration Management
 
-# \- Prometheus
-
-# \- Loki
-
-# \- OpenTelemetry
-
-# 
-
-# \---
-
-# 
-
-# \## Key Capabilities
-
-# 
-
-# \### Platform Deployment
-
-# Automated deployment of observability platform components across Kubernetes environments.
-
-# 
-
-# \### Upgrade Automation
-
-# Automated upgrade workflows with validation and verification steps.
-
-# 
-
-# \### Monitoring \& Alerting
-
-# Deployment and management of metrics, dashboards, logging, and alerting capabilities.
-
-# 
-
-# \### Configuration Management
-
-# Environment-specific configuration delivered through reusable automation patterns.
-
-# 
-
-# \### Operational Validation
-
-# Health verification and post-deployment validation procedures.
-
-# 
-
-# \---
-
-# 
-
-# \## Repository Structure
-
-# 
-
-# ```text
-
-# ansible/
-
-# ├── playbooks/
-
-# ├── roles/
-
-# 
-
-# docs/
-
-# 
-
-# examples/
-
+Reusable configuration patterns across multiple Kubernetes environments.
