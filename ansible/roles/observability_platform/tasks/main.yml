@@ -1,0 +1,8 @@
+---
+- name: Deploy observability platform
+  command: >
+    helm install observability
+    observability-chart
+    --namespace observability
+    --create-namespace
+    --wait

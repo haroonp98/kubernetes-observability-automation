@@ -1,0 +1,25 @@
+---
+- name: Verify Kubernetes access
+  command: kubectl get nodes
+  register: cluster_status
+  changed_when: false
+
+- name: Display cluster status
+  debug:
+    var: cluster_status.stdout_lines
+
+- name: Upgrade platform
+  command: >
+    helm upgrade observability
+    observability-chart
+    --namespace observability
+    --wait
+
+- name: Verify platform health
+  command: kubectl get pods -n observability
+  register: pod_status
+  changed_when: false
+
+- name: Display pod status
+  debug:
+    var: pod_status.stdout_lines

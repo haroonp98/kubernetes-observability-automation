@@ -1,0 +1,9 @@
+---
+- name: Validate platform workloads
+  command: kubectl get pods -n observability
+  register: pod_status
+  changed_when: false
+
+- name: Display platform status
+  debug:
+    var: pod_status.stdout_lines
